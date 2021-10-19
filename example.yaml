@@ -1,0 +1,8 @@
+---
+- hosts: aws
+  tasks:
+    - name: Execute the command in remote shell
+      shell: cat /etc/os-release
+      register : output
+    - debug:
+        msg: output
